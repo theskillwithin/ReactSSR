@@ -8,10 +8,10 @@ const config = {
   stats: {
     children: false,
   },
-  entry: './app/app.js',
+  entry: './app/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    fileName: 'app.js',
+    fileName: 'index.js',
   },
   module: {},
 }
