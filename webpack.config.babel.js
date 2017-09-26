@@ -11,7 +11,7 @@ const config = {
   entry: './app/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    fileName: 'index.js',
+    filename: 'index.js',
   },
   module: {},
 }
