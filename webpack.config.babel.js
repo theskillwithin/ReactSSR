@@ -1,6 +1,7 @@
 import path from 'path'
 import webpack from 'webpack'
 import ExtractTextPlugin from 'extract-text-webpack-plugin'
+import AssetsPlugin from 'assets-webpack-plugin'
 
 const isProd = true; // base this off env variables
 
@@ -90,6 +91,7 @@ config.plugins = [
     allChunks: true,
     disable: false,
   }),
+  new AssetsPlugin({ filename: 'dist/entry.json' }),
   new webpack.DefinePlugin({
     'process.env.NODE_ENV': JSON.stringify(
       isProd ? 'production' : 'development',
