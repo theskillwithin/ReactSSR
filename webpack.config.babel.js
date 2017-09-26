@@ -39,6 +39,9 @@ config.module.rules = [
         {
           loader: 'css-loader',
           options: {
+            modules: true,
+            importLoaders: 1,
+            localIdentName: '[name]__[local]___[hash:base64:5]',
             minimize: isProd,
           },
         },
@@ -85,11 +88,9 @@ config.plugins = [
   new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
   new webpack.NoEmitOnErrorsPlugin(),
   new ExtractTextPlugin({
-    filename: isProd
-      ? 'dist/styles/app.css'
-      : 'styles/app.css',
+    filename: 'styles/[name].bundle.css',
     allChunks: true,
-    disable: false,
+    disable: false
   }),
   new AssetsPlugin({ filename: 'dist/entry.json' }),
   new webpack.DefinePlugin({

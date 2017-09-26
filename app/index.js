@@ -1,8 +1,10 @@
 import React from 'react'
 
+import './styles'
+
 const Index = () => {
   return (
-    <div>TEST</div>
+    <div className="eg-container">TEST</div>
   )
 }
 
