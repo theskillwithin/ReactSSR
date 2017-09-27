@@ -1,12 +1,13 @@
-const express = require('express');
-const app     = express();
-const path    = require('path');
-const render  = require('./render');
+import express from 'express'
+const app = express()
+import path    from 'path'
+import render  from './render'
+
 
 const port = process.env.PORT || 8080;
 
-app.use(express.static(path.join(__dirname, 'public')));
-app.use(express.static(path.join(__dirname, '../dist')));
+app.use(express.static(path.join(path.resolve(), 'public')));
+app.use(express.static(path.join(path.resolve(), '../dist')));
 
 app.get('/', (req, res, next) => {
     render(req, res);
@@ -27,3 +28,4 @@ app.get('/counter/:count', (req, res, next) => {
 app.listen(port, () => {
     console.log(`Listening on port ${port} ...`);
 });
+

@@ -24,4 +24,4 @@ function render(req, res) {
     res.status(200).send(html);
 };
 
-module.exports = render;
+export default render
