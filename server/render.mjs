@@ -1,10 +1,11 @@
 import React from 'react'
-import fs from 'fs'
-import ReactDOMServer from 'react-dom/server'
-import Index from '../dist/js/home.bundle.js'
+// import fs from 'fs'
+// import ReactDOMServer from 'react-dom/server'
+// import Index from '../dist/js/home.bundle.js'
 
 function render(req, res) {
-    const content = ReactDOMServer.renderToString(React.createElement(Index));
+    // const content = ReactDOMServer.renderToString(React.createElement(Index));
+    // const content = ReactDOMServer.renderToString(Index);
     const html = `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,10 +14,7 @@ function render(req, res) {
     <link rel="stylesheet" href="/styles/home.bundle.css" type="text/css" media="all" />
 </head>
 <body>
-    <header>
-        ${content}
-    </header>
-    <div id="app"></div>
+    <div id="root"></div>
     <script type="text/javascript" src="/js/home.bundle.js"></script>
 </body>
 </html>`;

@@ -6,8 +6,11 @@ import render  from './render'
 
 const port = process.env.PORT || 8080;
 
-app.use(express.static(path.join(path.resolve(), 'public')));
-app.use(express.static(path.join(path.resolve(), '../dist')));
+const __dirname = path.resolve()
+
+
+// app.use(express.static(path.join(path.resolve(), 'public')));
+app.use(express.static(path.join(__dirname, 'dist')));
 
 app.get('/', (req, res, next) => {
     render(req, res);

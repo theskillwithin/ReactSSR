@@ -10,7 +10,7 @@ const config = {
     children: false,
   },
   entry: {
-    home: './app/index.js',
+    home: './app/ssr/index.js',
     another: './app/another.js'
   },
   output: {
@@ -76,7 +76,9 @@ config.module.rules = [
 config.resolve = {
   modules: [
     'node_modules',
-    path.resolve(__dirname, 'app'),
+    'app',
+    'store',
+    'server',
   ],
   extensions: ['.js', '.css', '.scss'],
 }
