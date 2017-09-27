@@ -6,7 +6,7 @@ import Page from '../dist/js/home.bundle.js'
 function render(req, res) {
     // const content = ReactDOMServer.renderToString(React.createElement(Index));
     const store = { data: 'test' }
-    const content = Page.global.reactServerRender(store));
+    const content = Page.global.reactServerRender(store);
     const html = `<!DOCTYPE html>
 <html lang="en">
 <head>
