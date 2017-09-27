@@ -31,6 +31,7 @@ config.module.rules = [
         options: {},
       },
     ],
+    exclude: '/node_modules/',
   },
   {
     test: /\.css$/,
