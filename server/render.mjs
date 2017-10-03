@@ -1,10 +1,10 @@
 import React from 'react'
 import fs from 'fs'
 import ReactDOMServer from 'react-dom/server'
-import Index from '../app/ssr/index'
+import Page from '../app/index.js'
 
 function render(req, res) {
-    const content = ReactDOMServer.renderToString(React.createElement(Index));
+    const content = ReactDOMServer.renderToString(React.createElement(Page));
     const store = { data: 'test' }
     const html = `<!DOCTYPE html>
 <html lang="en">
